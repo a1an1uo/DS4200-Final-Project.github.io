@@ -69,9 +69,10 @@ d3.csv("all_seasons.csv").then(function(data) {
         .attr("y1", 0)
         .attr("x2", xHeight(meanHeight))
         .attr("y2", height)
-        .attr("stroke", "red")
-        .attr("stroke-width", 2)
-        .attr("stroke-dasharray", "5,5");
+        .attr("stroke", "#FF9933")
+        .attr("stroke-width", 2);
+
+    var roundedMeanHeight = Math.round(meanHeight, 2);
 
     // Append US male mean height line
     var usMaleMeanHeight = 175.26; // US male mean height in cm
@@ -80,9 +81,8 @@ d3.csv("all_seasons.csv").then(function(data) {
         .attr("y1", 0)
         .attr("x2", xHeight(usMaleMeanHeight))
         .attr("y2", height)
-        .attr("stroke", "green")
-        .attr("stroke-width", 2)
-        .attr("stroke-dasharray", "5,5");
+        .attr("stroke", "#935F89")
+        .attr("stroke-width", 2);
 
     // Append X axis for height histogram
     svgHeight.append("g")
@@ -118,30 +118,30 @@ d3.csv("all_seasons.csv").then(function(data) {
         .text("Frequency");
 
     var legendHeight = svgHeight.append("g")
-        .attr("transform", "translate(" + (width - 120) + "," + 10 + ")");
+        .attr("transform", "translate(" + (width - 145) + "," + 10 + ")");
     
     legendHeight.append("rect")
         .attr("width", 10)
         .attr("height", 10)
-        .attr("fill", "red");
+        .attr("fill", "#FF9933");
     
     legendHeight.append("text")
         .attr("x", 15)
         .attr("y", 10)
         .attr("font-size", "11px")
-        .text("NBA Mean");
+        .text("NBA Mean: " + roundedMeanHeight + "cm");
     
     legendHeight.append("rect")
         .attr("width", 10)
         .attr("height", 10)
-        .attr("fill", "green")
+        .attr("fill", "#935F89")
         .attr("transform", "translate(0,20)");
     
     legendHeight.append("text")
         .attr("x", 15)
         .attr("y", 30)
         .attr("font-size", "11px")
-        .text("Average US Male Adult");
+        .text("Average US Male Adult: " + Math.round(usMaleMeanHeight) + "cm");
     
     // Set up SVG dimensions and margins for weight histogram
     var svgWeight = d3.select("#weight-chart-container").append("svg")
@@ -201,9 +201,8 @@ d3.csv("all_seasons.csv").then(function(data) {
         .attr("y1", 0)
         .attr("x2", xWeight(meanWeight))
         .attr("y2", height)
-        .attr("stroke", "red")
-        .attr("stroke-width", 2)
-        .attr("stroke-dasharray", "5,5");
+        .attr("stroke", "#FF9933")
+        .attr("stroke-width", 2);
 
     // Append US male mean weight line
     var usMaleMeanWeight = 90.63; // US male mean weight in kg
@@ -212,9 +211,8 @@ d3.csv("all_seasons.csv").then(function(data) {
         .attr("y1", 0)
         .attr("x2", xWeight(usMaleMeanWeight))
         .attr("y2", height)
-        .attr("stroke", "green")
-        .attr("stroke-width", 2)
-        .attr("stroke-dasharray", "5,5");
+        .attr("stroke", "#935F89")
+        .attr("stroke-width", 2);
 
     // Append X axis for weight histogram
     svgWeight.append("g")
@@ -250,28 +248,28 @@ d3.csv("all_seasons.csv").then(function(data) {
         .text("Frequency");
 
     var legendWeight = svgWeight.append("g")
-        .attr("transform", "translate(" + (width - 120) + "," + 10 + ")");
+        .attr("transform", "translate(" + (width - 150) + "," + 10 + ")");
     
     legendWeight.append("rect")
         .attr("width", 10)
         .attr("height", 10)
-        .attr("fill", "red");
+        .attr("fill", "#FF9933");
     
     legendWeight.append("text")
         .attr("x", 15)
         .attr("y", 10)
         .attr("font-size", "11px")
-        .text("NBA Mean");
+        .text("NBA Mean: " + Math.round(meanWeight) + "kg");
     
     legendWeight.append("rect")
         .attr("width", 10)
         .attr("height", 10)
-        .attr("fill", "green")
+        .attr("fill", "#935F89")
         .attr("transform", "translate(0,20)");
     
     legendWeight.append("text")
         .attr("x", 15)
         .attr("y", 30)
         .attr("font-size", "11px")
-        .text("Average US Male Adult");
+        .text("Average US Male Adult: " + Math.round(usMaleMeanWeight) + "kg");
 });
