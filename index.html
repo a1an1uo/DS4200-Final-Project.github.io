@@ -15,26 +15,25 @@
 
     <h3> Introduction </h3>
 
-    <p> Our project delves into assessing the impact of physical attributes such as height, weight, and age 
-        on NBA player performance. With the continuous evolution of basketball, the physical profile of the 
-        ideal NBA player is ever-changing, influencing not just on-court strategies but also critical management 
-        decisions such as scouting and team building. By meticulously examining a rich array of demographic, 
-        biometric, and performance data, our analysis aims to unearth correlations between physical traits and 
-        player success, thereby shaping future strategies in player development and team composition. These 
-        insights will provide valuable perspectives for both basketball professionals and enthusiasts, guiding 
-        their understanding and strategic approaches in the evolving landscape of the sport.
+    <p> Our project delves into assessing the impact of physical attributes such as height, weight, and age on NBA player performance.
+        With the continuous evolution of basketball, the physical profile of the ideal NBA player is ever-changing,
+        influencing not just on-court strategies but also critical management decisions such as scouting and team building.
+        By meticulously examining a rich array of demographic, biometric, and performance data, our analysis aims to unearth correlations
+        between physical traits and player success, thereby shaping future strategies in player development and team composition.
+        These insights will provide valuable perspectives for both basketball professionals and enthusiasts,
+        guiding their understanding and strategic approaches in the evolving landscape of the sport.
     </p>
 
     <h3> Data </h3>
 
-    <p> Our study is underpinned by an extensive dataset containing detailed records of over 12,000 NBA players 
-        from the 1996-2022 seasons. This dataset, updated most recently on October 13, 2023, to include the latest 
-        season data, comprises 12,844 observations with 21 detailed attributes such as player height, weight, age, 
-        points scored, rebounds, and assists. Sourced from Kaggle and meticulously supplemented with data from the 
-        NBA Stats API and Basketball-Reference for missing entries, our dataset offers a profound basis for both 
-        foundational and advanced statistical analysis. The comprehensive nature of this data not only allows for a 
-        longitudinal analysis over the span of nearly three decades but also supports a nuanced exploration of how 
-        physical attributes impact player performance and team dynamics across different basketball eras.
+    <p> Our study is supported by an extensive dataset containing detailed records of NBA players from 1996-2022. This dataset,
+        updated most recently on October 13, 2023, to include the latest season data, comprises 12,844 observations
+        with 21 detailed attributes such as player height, weight, age, points scored, rebounds, and assists.
+        Sourced from <a href="https://www.kaggle.com/datasets/justinas/nba-players-data">Kaggle</a> and supplemented with
+        data from the NBA Stats API and <a href="https://www.basketball-reference.com/">Basketball-Reference</a> for missing entries,
+        our dataset offers a profound basis for both foundational and advanced statistical analysis.
+        The comprehensive nature of this data not only allows for longitudinal analysis over the span of nearly three decades
+        but also supports a subtle exploration of how physical attributes impact player performance and team dynamics across different basketball eras.
     </p>
 
     <div class="center">
@@ -150,64 +149,54 @@
         which is needed to make maps for the world.
     </p>
 
-    <p> To make a better data visualization, we create two different 
-        layers for the average height and the average weight in each country.
-        Following is an interactive map for the all the countries in the world. 
-        User can zoom in the map. The depth color for each layer indicates 
-        the average height and weight for each country. When click any
-        country, the name and its average NBA players height and weight will be revealed.
+    <p> To take a better look at the overall data, we create two different layers for the average height and the average weight in each country.
+        Following is an interactive map for all the countries in the world. Users can zoom in on the map.
+        The depth color for each layer indicates the average height and weight for each country.
+        When you click on any country, the name and its average NBA player's height and weight will be revealed.
     </p>
 
     <div class="center">
         <iframe src="geography.html" width="100%" height="400px" frameborder="10"></iframe>
     </div>
 
-    <p> In general, countries mainly send centers and big forwards tend to have higher
-        average height and weight like China for example. On the other hand, countries
-        mainly provide point guards and shooting guards tend to have lower average 
-        height and weight than the others like United States for example. Lastly, countries
-        mainly give small forwards tend to have relatively high average height and low weight
-        like Russia and Germany.
+    <p> In general, countries mainly send centers, and big forwards tend to have a higher average height and weight,
+        like China, for example. On the other hand, countries that mainly provide point guards and shooting guards
+        tend to have lower average heights and weights than others, like the United States, for example.
+        Lastly, countries that mainly give small forwards tend to have relatively high average height and low weight, like Russia and Germany.
     </p>
 
-    <h3> Overview of Players' Heights And Weights </h3>
+    <h3> Overview of NBA Players' Heights and Weights </h3>
 
-    <p> We primarily consider physical performance will be a scale 
-        to select NBA players. For this reason, 
-        we leverage bar plots with distribution of heights and weights by d3 
-        to explore the exact influencing factors.
+    <p> We primarily consider that physical performance will be a factor in selecting NBA players.
+        For this reason, we leverage bar plots with a distribution of heights and weights by d3 to explore the exact influencing factors.
     </p>
 
     <div class="container">
         <div id="height-chart-container"></div>
         <div class="text">
-            <p> The first plot presents the distribution of heights over all NBA players,
-                which is negatively skewed due to some extreme shorter heights at the left side tail.
-                The straight lines in orange demostrated the average heights of NBA players,
-                 which rounds about 201 cm. And the straight lines in purple is 
-                 the mean heights of US male adults, which is about 175cm. 
-                 Most of NBA players' heights are much more higher than the US male adults' 
-                 average height. It indicates that to be a NBA player, height is one of 
-                 the influence factors.
+            <p> The first plot presents the overall distribution of heights among NBA players,
+                which is negatively skewed due to some extremely shorter heights at the left side tail.
+                The straight line in orange demonstrate the average heights of NBA players, which is about 201cm.
+                The straight line in purple are the mean heights of US male adults, which is about 175cm.
+                Most NBA players' heights are much higher than US male adults' average height.
+                It indicates that to be an NBA player, height is one of the influence factors.
             </p>
         </div>
     </div>
 
     <div class="container">
         <div class="text">
-            <p> The second plot presents the distribution of weights over all NBA players,
-                which is practically symmetric and normal distribution. The straight lines 
-                in orange demostrated the average weights of NBA players,which rounds about 100 kg. 
-                 And the straight lines in purple is the mean weights of US male adults, 
-                 which is about 91 kg. Most of NBA players' weights are heavier than
-                 the US male adults' average weight. It indicates that weight is
-                 also considered as one of the influence factors.
+            <p> The second plot presents the distribution of weights over all NBA players, which is practically symmetric and normal.
+                The straight line in orange demonstrate the average weights of NBA players, which is about 100kg.
+                The straight line in purple are the mean weights of US male adults, which is about 91kg.
+                Most NBA players' weights are heavier than US male adults' average weight.
+                It indicates that weight is also considered one of the influence factors.
             </p>
         </div>
         <div id="weight-chart-container"></div>
     </div>
 
-    <h3> Further Research on Players' Heights and Weights </h3>
+    <h3> Exploration on NBA Players' Heights and Weights </h3>
 
     <div class="container">
         <div class="image">
@@ -215,11 +204,10 @@
         </div>
     </div>
 
-    <p> The purpose of line plot is to explore the relationship between NBA player heights 
-        and weights by time. The correlation at each season is over 0.72, which means 
-        there is a strong relationship between NBA player heights and weights. Since 2014, 
-        correlation started decreasing to 12 percents. There is still a strong correlation 
-        between them, but weaker than the period before 2014.
+    <p> The purpose of the line plot is to explore the relationship between NBA player heights and weights over time.
+        The correlation at each season is over 0.72, which means there is a strong relationship between NBA player heights and weights.
+        Since 2014, the correlation has started decreasing to 12 percent.
+        There is still a strong correlation between them, but it is weaker than the period before 2014.
     </p>
 
     <div class="container">
@@ -228,11 +216,10 @@
         </div>
     </div>
 
-    <p> The points at each year is located by the average heights and weights for each season 
-        from 1996 to 2022. Combined with previous plot, both of them present an decreasing trendency 
-        since 2014. For this plot, highest and weights we can observe the curve of NBA player 
-        heights and weights lines are similar before 2012. However, since 2012, the change of trendency 
-        become converse. This is why correlation decreases 12 percents during this period.
+    <p> The points for each year are located by the average heights and weights for each season from 1996 to 2022.
+        Combined with the previous plot, both of them present a decreasing trend since 2014. For this plot, highest and weights,
+        we can observe that the curve of NBA player heights and weights lines was similar before 2012.
+        However, since 2012, the trend has changed. This is why the correlation decreased by 12 percent during this period.
     </p>
 
     <h3> Physical Attributes and Performance Metrics </h3>
@@ -243,7 +230,7 @@
                 our correlation matrix heatmap provides a data-driven perspective.
                 A robust positive correlation of 0.82 is evident between player height and weight,
                 reinforcing common expectations about player physique.
-                Delving deeper, the heatmap unveils a moderate positive correlation between player height and rebounding statistics,
+                Delving deeper, the heatmap unveils a moderately positive correlation between player height and rebounding statistics,
                 underscoring the advantage taller players possess in securing rebounds. On the flip side,
                 the negative correlation between height and assists illuminates the inclination for shorter players
                 to engage more frequently in ball distribution and playmaking activities.
@@ -261,14 +248,14 @@
         </div>
     </div>
 
-    <p> We aslo focus on the evolution of shooting efficiency, as depicted by the true shooting percentage,
-        with respect to player height, comparing two distinct basketball eras: before and after 2012.
+    <p> We also focus on the evolution of shooting efficiency, as depicted by the true shooting percentage,
+        concerning player height, comparing two distinct basketball eras: before and after 2012.
         True shooting percentage is a comprehensive measure, considering all forms of scoring attempts,
         which provides an integrated assessment of shooting effectiveness.
     </p>
 
     <p> The side-by-side boxplots distinctly categorize players into height ranges,
-        allowing for a direct comparison of shooting performance within specific physical profiles.
+        allowing for a direct comparison of shooting performance within specific player positions.
         A notable upward trend in both the median and the interquartile range of true shooting percentages post-2012 is observed
         across all height categories. This trend not only signifies an overall improvement in player shooting efficiency
         but also reflects strategic adaptations within the sport that likely emphasize skill development
@@ -287,12 +274,11 @@
         </div>
     </div>
 
-    <h3> Physical Attributes and Performance Metrics Each Season</h3>
+    <h3> Physical Attributes and Selected Performance Metrics Each Season </h3>
 
-    <p> Now combining the metrics and distributions of height and weight each season,
-        We create the following interactive plot such that user can choose one of the 
-        four lines to see the different correlations between specific physical attributes and
-        specific performance in each season.
+    <p> After combining the metrics and distributions of height and weight for each season, we created the following interactive plot,
+        in which the user can choose one of the four lines to see the different correlations
+        between specific physical attributes and specific performance in each season.
     </p>
 
     <div class="center">
@@ -301,22 +287,15 @@
 
     <h3> Conclusion and Future Work </h3>
 
-    <p> After the analysis, we have concluded there exist a transition 
-        from big-ball era to small-ball era. The small-ball era is 
-        characterized by shorter, more agile players, with a focus 
-        on speed, flexibility, and perimeter shooting. the big-ball 
-        era is characterized by taller, heavier players, with an 
-        emphasis on strength, height advantage, and inside scoring.
+    <p> After the analysis, we have concluded there is a transition from the big-ball era to the small-ball era.
+        The small-ball era is characterized by shorter, more agile players with a focus on speed, flexibility, and perimeter shooting.
+        The big-ball era is characterized by taller, heavier players, with an emphasis on strength, height advantage, and inside scoring.
     </p>
 
-    <p> For future work, it would be interesting to analyze player 
-        skills in addition to physical attributes, and how they 
-        contribute to success in different eras. This could include 
-        aspects such as shooting accuracy, defensive skills, passing 
-        ability, and more. Understanding these factors could provide 
-        valuable insights into the evolution of the game and inform 
-        strategies for player development and team composition.
+    <p> For future work, it would be interesting to analyze player skills in addition to physical attributes
+        and how they contribute to success in different eras. This could include aspects such as shooting accuracy,
+        defensive skills, passing ability, and more. Understanding these factors could provide valuable insights
+        into the evolution of the game and inform strategies for player development and team composition.
     </p>
-
 </body>
 </html>

@@ -119,30 +119,30 @@ d3.csv("all_seasons.csv").then(function(data) {
 
     var legendHeight = svgHeight.append("g")
         .attr("transform", "translate(" + (width - 145) + "," + 10 + ")");
-    
+
     legendHeight.append("rect")
         .attr("width", 10)
         .attr("height", 10)
         .attr("fill", "#FF9933");
-    
+
     legendHeight.append("text")
         .attr("x", 15)
         .attr("y", 10)
         .attr("font-size", "11px")
         .text("NBA Mean: " + roundedMeanHeight + "cm");
-    
+
     legendHeight.append("rect")
         .attr("width", 10)
         .attr("height", 10)
         .attr("fill", "#935F89")
         .attr("transform", "translate(0,20)");
-    
+
     legendHeight.append("text")
         .attr("x", 15)
         .attr("y", 30)
         .attr("font-size", "11px")
         .text("Average US Male Adult: " + Math.round(usMaleMeanHeight) + "cm");
-    
+
     // Set up SVG dimensions and margins for weight histogram
     var svgWeight = d3.select("#weight-chart-container").append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -249,24 +249,24 @@ d3.csv("all_seasons.csv").then(function(data) {
 
     var legendWeight = svgWeight.append("g")
         .attr("transform", "translate(" + (width - 150) + "," + 10 + ")");
-    
+
     legendWeight.append("rect")
         .attr("width", 10)
         .attr("height", 10)
         .attr("fill", "#FF9933");
-    
+
     legendWeight.append("text")
         .attr("x", 15)
         .attr("y", 10)
         .attr("font-size", "11px")
         .text("NBA Mean: " + Math.round(meanWeight) + "kg");
-    
+
     legendWeight.append("rect")
         .attr("width", 10)
         .attr("height", 10)
         .attr("fill", "#935F89")
         .attr("transform", "translate(0,20)");
-    
+
     legendWeight.append("text")
         .attr("x", 15)
         .attr("y", 30)
